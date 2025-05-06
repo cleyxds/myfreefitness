@@ -57,6 +57,16 @@ const theme = createTheme({
       bebas_neue.style.fontFamily,
       dm_sans.style.fontFamily,
     ].join(","),
+    bebas_neue_h2: {
+      fontFamily: bebas_neue.style.fontFamily,
+      fontSize: 30,
+      fontWeight: 400,
+    },
+    dm_sans_h6: {
+      fontFamily: dm_sans.style.fontFamily,
+      fontSize: 15,
+      fontWeight: 500,
+    },
   },
   components: {
     MuiContainer: {
@@ -108,6 +118,32 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     green_primary: PaletteColorOptions
     black_19: PaletteColorOptions
+  }
+
+  interface TypographyVariants {
+    bebas_neue_h2: React.CSSProperties
+  }
+
+  interface TypographyVariantsOptions {
+    bebas_neue_h2: React.CSSProperties
+  }
+
+  interface TypographyVariants {
+    dm_sans_h6: React.CSSProperties
+  }
+
+  interface TypographyVariantsOptions {
+    dm_sans_h6: React.CSSProperties
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    bebas_neue_h2: true
+  }
+
+  interface TypographyPropsVariantOverrides {
+    dm_sans_h6: true
   }
 }
 
