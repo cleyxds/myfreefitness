@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
 
 export default function page() {
-  return redirect("/onboarding")
+  return redirect("/welcome/login")
 }

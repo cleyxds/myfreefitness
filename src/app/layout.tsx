@@ -4,7 +4,9 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
 import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 
-import theme from "@/theme"
+import theme, { fontVariants } from "@/theme"
+
+import DataRoot from "@/components/data-root"
 
 export const metadata: Metadata = {
   title: "Fitness App",
@@ -17,14 +19,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariants}>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
+          <DataRoot>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
 
-            {children}
-          </ThemeProvider>
+              {children}
+            </ThemeProvider>
+          </DataRoot>
         </AppRouterCacheProvider>
       </body>
     </html>

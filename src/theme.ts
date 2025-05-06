@@ -1,15 +1,30 @@
 "use client"
 
-import { Roboto } from "next/font/google"
+import { Montserrat, Bebas_Neue, DM_Sans } from "next/font/google"
 
-import { createTheme } from "@mui/material/styles"
+import { createTheme, PaletteColor, PaletteColorOptions } from "@mui/material/styles"
 
 import { css } from "@mui/material/styles"
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-montserrat",
+})
+
+const bebas_neue = Bebas_Neue({
+  weight: ["400"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-bebasneue",
+})
+
+const dm_sans = DM_Sans({
+  weight: ["400", "500", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-dmsans",
 })
 
 const screen = css`
@@ -24,12 +39,24 @@ const screen = css`
 `
 
 const theme = createTheme({
-  cssVariables: true,
+  colorSchemes: {
+    dark: true,
+  },
   palette: {
     mode: "light",
+    green_primary: {
+      main: "#B0C929",
+    },
+    black_19: {
+      main: "#191919",
+    },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: [
+      montserrat.style.fontFamily,
+      bebas_neue.style.fontFamily,
+      dm_sans.style.fontFamily,
+    ].join(","),
   },
   components: {
     MuiContainer: {
@@ -71,5 +98,23 @@ const theme = createTheme({
     },
   },
 })
+
+declare module "@mui/material/styles" {
+  interface Palette {
+    green_primary: PaletteColor
+    black_19: PaletteColor
+  }
+
+  interface PaletteOptions {
+    green_primary: PaletteColorOptions
+    black_19: PaletteColorOptions
+  }
+}
+
+export const fontVariants = [
+  montserrat.variable,
+  bebas_neue.variable,
+  dm_sans.variable,
+].join(" ")
 
 export default theme
