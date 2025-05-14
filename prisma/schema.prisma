@@ -20,9 +20,9 @@ model User {
   updatedAt     DateTime      @updatedAt
   createdBy     String
   updatedBy     String
-  state         StateCreation
   deletedBy     String?
   deletedAt     DateTime?
+  state         StateCreation
   equipId       String?
   logs          Json?
   fullname      String
@@ -36,7 +36,14 @@ model User {
 }
 
 model Profile {
-  id           String @id @default(cuid())
+  id           String        @id @default(cuid())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  createdBy    String
+  updatedBy    String
+  deletedBy    String?
+  deletedAt    DateTime?
+  state        StateCreation
   favorite     String
   age          String
   weight       String
@@ -44,8 +51,8 @@ model Profile {
   height       String
   fitnessLevel String
   goal         String
-  userId       String @unique
-  user         User   @relation(fields: [userId], references: [id])
+  userId       String        @unique
+  user         User          @relation(fields: [userId], references: [id])
   logs         Json?
 }
 

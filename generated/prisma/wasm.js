@@ -126,9 +126,9 @@ exports.Prisma.UserScalarFieldEnum = {
   updatedAt: 'updatedAt',
   createdBy: 'createdBy',
   updatedBy: 'updatedBy',
-  state: 'state',
   deletedBy: 'deletedBy',
   deletedAt: 'deletedAt',
+  state: 'state',
   equipId: 'equipId',
   logs: 'logs',
   fullname: 'fullname',
@@ -142,6 +142,13 @@ exports.Prisma.UserScalarFieldEnum = {
 
 exports.Prisma.ProfileScalarFieldEnum = {
   id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  createdBy: 'createdBy',
+  updatedBy: 'updatedBy',
+  deletedBy: 'deletedBy',
+  deletedAt: 'deletedAt',
+  state: 'state',
   favorite: 'favorite',
   age: 'age',
   weight: 'weight',
@@ -195,6 +202,9 @@ exports.Prisma.UserOrderByRelevanceFieldEnum = {
 
 exports.Prisma.ProfileOrderByRelevanceFieldEnum = {
   id: 'id',
+  createdBy: 'createdBy',
+  updatedBy: 'updatedBy',
+  deletedBy: 'deletedBy',
   favorite: 'favorite',
   age: 'age',
   weight: 'weight',

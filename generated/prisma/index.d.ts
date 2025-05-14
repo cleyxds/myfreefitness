@@ -979,9 +979,9 @@ export namespace Prisma {
     updatedAt: Date | null
     createdBy: string | null
     updatedBy: string | null
-    state: $Enums.StateCreation | null
     deletedBy: string | null
     deletedAt: Date | null
+    state: $Enums.StateCreation | null
     equipId: string | null
     fullname: string | null
     email: string | null
@@ -997,9 +997,9 @@ export namespace Prisma {
     updatedAt: Date | null
     createdBy: string | null
     updatedBy: string | null
-    state: $Enums.StateCreation | null
     deletedBy: string | null
     deletedAt: Date | null
+    state: $Enums.StateCreation | null
     equipId: string | null
     fullname: string | null
     email: string | null
@@ -1015,9 +1015,9 @@ export namespace Prisma {
     updatedAt: number
     createdBy: number
     updatedBy: number
-    state: number
     deletedBy: number
     deletedAt: number
+    state: number
     equipId: number
     logs: number
     fullname: number
@@ -1037,9 +1037,9 @@ export namespace Prisma {
     updatedAt?: true
     createdBy?: true
     updatedBy?: true
-    state?: true
     deletedBy?: true
     deletedAt?: true
+    state?: true
     equipId?: true
     fullname?: true
     email?: true
@@ -1055,9 +1055,9 @@ export namespace Prisma {
     updatedAt?: true
     createdBy?: true
     updatedBy?: true
-    state?: true
     deletedBy?: true
     deletedAt?: true
+    state?: true
     equipId?: true
     fullname?: true
     email?: true
@@ -1073,9 +1073,9 @@ export namespace Prisma {
     updatedAt?: true
     createdBy?: true
     updatedBy?: true
-    state?: true
     deletedBy?: true
     deletedAt?: true
+    state?: true
     equipId?: true
     logs?: true
     fullname?: true
@@ -1166,9 +1166,9 @@ export namespace Prisma {
     updatedAt: Date
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy: string | null
     deletedAt: Date | null
+    state: $Enums.StateCreation
     equipId: string | null
     logs: JsonValue | null
     fullname: string
@@ -1203,9 +1203,9 @@ export namespace Prisma {
     updatedAt?: boolean
     createdBy?: boolean
     updatedBy?: boolean
-    state?: boolean
     deletedBy?: boolean
     deletedAt?: boolean
+    state?: boolean
     equipId?: boolean
     logs?: boolean
     fullname?: boolean
@@ -1226,9 +1226,9 @@ export namespace Prisma {
     updatedAt?: boolean
     createdBy?: boolean
     updatedBy?: boolean
-    state?: boolean
     deletedBy?: boolean
     deletedAt?: boolean
+    state?: boolean
     equipId?: boolean
     logs?: boolean
     fullname?: boolean
@@ -1240,7 +1240,7 @@ export namespace Prisma {
     address?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "createdBy" | "updatedBy" | "state" | "deletedBy" | "deletedAt" | "equipId" | "logs" | "fullname" | "email" | "phone" | "password" | "imgProfilURL" | "imgProfilPATH" | "address", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "createdBy" | "updatedBy" | "deletedBy" | "deletedAt" | "state" | "equipId" | "logs" | "fullname" | "email" | "phone" | "password" | "imgProfilURL" | "imgProfilPATH" | "address", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Profile?: boolean | User$ProfileArgs<ExtArgs>
   }
@@ -1256,9 +1256,9 @@ export namespace Prisma {
       updatedAt: Date
       createdBy: string
       updatedBy: string
-      state: $Enums.StateCreation
       deletedBy: string | null
       deletedAt: Date | null
+      state: $Enums.StateCreation
       equipId: string | null
       logs: Prisma.JsonValue | null
       fullname: string
@@ -1643,9 +1643,9 @@ export namespace Prisma {
     readonly updatedAt: FieldRef<"User", 'DateTime'>
     readonly createdBy: FieldRef<"User", 'String'>
     readonly updatedBy: FieldRef<"User", 'String'>
-    readonly state: FieldRef<"User", 'StateCreation'>
     readonly deletedBy: FieldRef<"User", 'String'>
     readonly deletedAt: FieldRef<"User", 'DateTime'>
+    readonly state: FieldRef<"User", 'StateCreation'>
     readonly equipId: FieldRef<"User", 'String'>
     readonly logs: FieldRef<"User", 'Json'>
     readonly fullname: FieldRef<"User", 'String'>
@@ -2047,6 +2047,13 @@ export namespace Prisma {
 
   export type ProfileMinAggregateOutputType = {
     id: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+    createdBy: string | null
+    updatedBy: string | null
+    deletedBy: string | null
+    deletedAt: Date | null
+    state: $Enums.StateCreation | null
     favorite: string | null
     age: string | null
     weight: string | null
@@ -2059,6 +2066,13 @@ export namespace Prisma {
 
   export type ProfileMaxAggregateOutputType = {
     id: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+    createdBy: string | null
+    updatedBy: string | null
+    deletedBy: string | null
+    deletedAt: Date | null
+    state: $Enums.StateCreation | null
     favorite: string | null
     age: string | null
     weight: string | null
@@ -2071,6 +2085,13 @@ export namespace Prisma {
 
   export type ProfileCountAggregateOutputType = {
     id: number
+    createdAt: number
+    updatedAt: number
+    createdBy: number
+    updatedBy: number
+    deletedBy: number
+    deletedAt: number
+    state: number
     favorite: number
     age: number
     weight: number
@@ -2086,6 +2107,13 @@ export namespace Prisma {
 
   export type ProfileMinAggregateInputType = {
     id?: true
+    createdAt?: true
+    updatedAt?: true
+    createdBy?: true
+    updatedBy?: true
+    deletedBy?: true
+    deletedAt?: true
+    state?: true
     favorite?: true
     age?: true
     weight?: true
@@ -2098,6 +2126,13 @@ export namespace Prisma {
 
   export type ProfileMaxAggregateInputType = {
     id?: true
+    createdAt?: true
+    updatedAt?: true
+    createdBy?: true
+    updatedBy?: true
+    deletedBy?: true
+    deletedAt?: true
+    state?: true
     favorite?: true
     age?: true
     weight?: true
@@ -2110,6 +2145,13 @@ export namespace Prisma {
 
   export type ProfileCountAggregateInputType = {
     id?: true
+    createdAt?: true
+    updatedAt?: true
+    createdBy?: true
+    updatedBy?: true
+    deletedBy?: true
+    deletedAt?: true
+    state?: true
     favorite?: true
     age?: true
     weight?: true
@@ -2196,6 +2238,13 @@ export namespace Prisma {
 
   export type ProfileGroupByOutputType = {
     id: string
+    createdAt: Date
+    updatedAt: Date
+    createdBy: string
+    updatedBy: string
+    deletedBy: string | null
+    deletedAt: Date | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -2226,6 +2275,13 @@ export namespace Prisma {
 
   export type ProfileSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    createdBy?: boolean
+    updatedBy?: boolean
+    deletedBy?: boolean
+    deletedAt?: boolean
+    state?: boolean
     favorite?: boolean
     age?: boolean
     weight?: boolean
@@ -2242,6 +2298,13 @@ export namespace Prisma {
 
   export type ProfileSelectScalar = {
     id?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    createdBy?: boolean
+    updatedBy?: boolean
+    deletedBy?: boolean
+    deletedAt?: boolean
+    state?: boolean
     favorite?: boolean
     age?: boolean
     weight?: boolean
@@ -2253,7 +2316,7 @@ export namespace Prisma {
     logs?: boolean
   }
 
-  export type ProfileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "favorite" | "age" | "weight" | "goalWeight" | "height" | "fitnessLevel" | "goal" | "userId" | "logs", ExtArgs["result"]["profile"]>
+  export type ProfileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "createdBy" | "updatedBy" | "deletedBy" | "deletedAt" | "state" | "favorite" | "age" | "weight" | "goalWeight" | "height" | "fitnessLevel" | "goal" | "userId" | "logs", ExtArgs["result"]["profile"]>
   export type ProfileInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -2265,6 +2328,13 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
+      createdAt: Date
+      updatedAt: Date
+      createdBy: string
+      updatedBy: string
+      deletedBy: string | null
+      deletedAt: Date | null
+      state: $Enums.StateCreation
       favorite: string
       age: string
       weight: string
@@ -2645,6 +2715,13 @@ export namespace Prisma {
    */
   interface ProfileFieldRefs {
     readonly id: FieldRef<"Profile", 'String'>
+    readonly createdAt: FieldRef<"Profile", 'DateTime'>
+    readonly updatedAt: FieldRef<"Profile", 'DateTime'>
+    readonly createdBy: FieldRef<"Profile", 'String'>
+    readonly updatedBy: FieldRef<"Profile", 'String'>
+    readonly deletedBy: FieldRef<"Profile", 'String'>
+    readonly deletedAt: FieldRef<"Profile", 'DateTime'>
+    readonly state: FieldRef<"Profile", 'StateCreation'>
     readonly favorite: FieldRef<"Profile", 'String'>
     readonly age: FieldRef<"Profile", 'String'>
     readonly weight: FieldRef<"Profile", 'String'>
@@ -3035,9 +3112,9 @@ export namespace Prisma {
     updatedAt: 'updatedAt',
     createdBy: 'createdBy',
     updatedBy: 'updatedBy',
-    state: 'state',
     deletedBy: 'deletedBy',
     deletedAt: 'deletedAt',
+    state: 'state',
     equipId: 'equipId',
     logs: 'logs',
     fullname: 'fullname',
@@ -3054,6 +3131,13 @@ export namespace Prisma {
 
   export const ProfileScalarFieldEnum: {
     id: 'id',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
+    createdBy: 'createdBy',
+    updatedBy: 'updatedBy',
+    deletedBy: 'deletedBy',
+    deletedAt: 'deletedAt',
+    state: 'state',
     favorite: 'favorite',
     age: 'age',
     weight: 'weight',
@@ -3128,6 +3212,9 @@ export namespace Prisma {
 
   export const ProfileOrderByRelevanceFieldEnum: {
     id: 'id',
+    createdBy: 'createdBy',
+    updatedBy: 'updatedBy',
+    deletedBy: 'deletedBy',
     favorite: 'favorite',
     age: 'age',
     weight: 'weight',
@@ -3200,9 +3287,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"User"> | Date | string
     createdBy?: StringFilter<"User"> | string
     updatedBy?: StringFilter<"User"> | string
-    state?: EnumStateCreationFilter<"User"> | $Enums.StateCreation
     deletedBy?: StringNullableFilter<"User"> | string | null
     deletedAt?: DateTimeNullableFilter<"User"> | Date | string | null
+    state?: EnumStateCreationFilter<"User"> | $Enums.StateCreation
     equipId?: StringNullableFilter<"User"> | string | null
     logs?: JsonNullableFilter<"User">
     fullname?: StringFilter<"User"> | string
@@ -3221,9 +3308,9 @@ export namespace Prisma {
     updatedAt?: SortOrder
     createdBy?: SortOrder
     updatedBy?: SortOrder
-    state?: SortOrder
     deletedBy?: SortOrderInput | SortOrder
     deletedAt?: SortOrderInput | SortOrder
+    state?: SortOrder
     equipId?: SortOrderInput | SortOrder
     logs?: SortOrderInput | SortOrder
     fullname?: SortOrder
@@ -3247,9 +3334,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"User"> | Date | string
     createdBy?: StringFilter<"User"> | string
     updatedBy?: StringFilter<"User"> | string
-    state?: EnumStateCreationFilter<"User"> | $Enums.StateCreation
     deletedBy?: StringNullableFilter<"User"> | string | null
     deletedAt?: DateTimeNullableFilter<"User"> | Date | string | null
+    state?: EnumStateCreationFilter<"User"> | $Enums.StateCreation
     equipId?: StringNullableFilter<"User"> | string | null
     logs?: JsonNullableFilter<"User">
     fullname?: StringFilter<"User"> | string
@@ -3267,9 +3354,9 @@ export namespace Prisma {
     updatedAt?: SortOrder
     createdBy?: SortOrder
     updatedBy?: SortOrder
-    state?: SortOrder
     deletedBy?: SortOrderInput | SortOrder
     deletedAt?: SortOrderInput | SortOrder
+    state?: SortOrder
     equipId?: SortOrderInput | SortOrder
     logs?: SortOrderInput | SortOrder
     fullname?: SortOrder
@@ -3293,9 +3380,9 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     createdBy?: StringWithAggregatesFilter<"User"> | string
     updatedBy?: StringWithAggregatesFilter<"User"> | string
-    state?: EnumStateCreationWithAggregatesFilter<"User"> | $Enums.StateCreation
     deletedBy?: StringNullableWithAggregatesFilter<"User"> | string | null
     deletedAt?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
+    state?: EnumStateCreationWithAggregatesFilter<"User"> | $Enums.StateCreation
     equipId?: StringNullableWithAggregatesFilter<"User"> | string | null
     logs?: JsonNullableWithAggregatesFilter<"User">
     fullname?: StringWithAggregatesFilter<"User"> | string
@@ -3312,6 +3399,13 @@ export namespace Prisma {
     OR?: ProfileWhereInput[]
     NOT?: ProfileWhereInput | ProfileWhereInput[]
     id?: StringFilter<"Profile"> | string
+    createdAt?: DateTimeFilter<"Profile"> | Date | string
+    updatedAt?: DateTimeFilter<"Profile"> | Date | string
+    createdBy?: StringFilter<"Profile"> | string
+    updatedBy?: StringFilter<"Profile"> | string
+    deletedBy?: StringNullableFilter<"Profile"> | string | null
+    deletedAt?: DateTimeNullableFilter<"Profile"> | Date | string | null
+    state?: EnumStateCreationFilter<"Profile"> | $Enums.StateCreation
     favorite?: StringFilter<"Profile"> | string
     age?: StringFilter<"Profile"> | string
     weight?: StringFilter<"Profile"> | string
@@ -3326,6 +3420,13 @@ export namespace Prisma {
 
   export type ProfileOrderByWithRelationInput = {
     id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    createdBy?: SortOrder
+    updatedBy?: SortOrder
+    deletedBy?: SortOrderInput | SortOrder
+    deletedAt?: SortOrderInput | SortOrder
+    state?: SortOrder
     favorite?: SortOrder
     age?: SortOrder
     weight?: SortOrder
@@ -3345,6 +3446,13 @@ export namespace Prisma {
     AND?: ProfileWhereInput | ProfileWhereInput[]
     OR?: ProfileWhereInput[]
     NOT?: ProfileWhereInput | ProfileWhereInput[]
+    createdAt?: DateTimeFilter<"Profile"> | Date | string
+    updatedAt?: DateTimeFilter<"Profile"> | Date | string
+    createdBy?: StringFilter<"Profile"> | string
+    updatedBy?: StringFilter<"Profile"> | string
+    deletedBy?: StringNullableFilter<"Profile"> | string | null
+    deletedAt?: DateTimeNullableFilter<"Profile"> | Date | string | null
+    state?: EnumStateCreationFilter<"Profile"> | $Enums.StateCreation
     favorite?: StringFilter<"Profile"> | string
     age?: StringFilter<"Profile"> | string
     weight?: StringFilter<"Profile"> | string
@@ -3358,6 +3466,13 @@ export namespace Prisma {
 
   export type ProfileOrderByWithAggregationInput = {
     id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    createdBy?: SortOrder
+    updatedBy?: SortOrder
+    deletedBy?: SortOrderInput | SortOrder
+    deletedAt?: SortOrderInput | SortOrder
+    state?: SortOrder
     favorite?: SortOrder
     age?: SortOrder
     weight?: SortOrder
@@ -3377,6 +3492,13 @@ export namespace Prisma {
     OR?: ProfileScalarWhereWithAggregatesInput[]
     NOT?: ProfileScalarWhereWithAggregatesInput | ProfileScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Profile"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Profile"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Profile"> | Date | string
+    createdBy?: StringWithAggregatesFilter<"Profile"> | string
+    updatedBy?: StringWithAggregatesFilter<"Profile"> | string
+    deletedBy?: StringNullableWithAggregatesFilter<"Profile"> | string | null
+    deletedAt?: DateTimeNullableWithAggregatesFilter<"Profile"> | Date | string | null
+    state?: EnumStateCreationWithAggregatesFilter<"Profile"> | $Enums.StateCreation
     favorite?: StringWithAggregatesFilter<"Profile"> | string
     age?: StringWithAggregatesFilter<"Profile"> | string
     weight?: StringWithAggregatesFilter<"Profile"> | string
@@ -3394,9 +3516,9 @@ export namespace Prisma {
     updatedAt?: Date | string
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy?: string | null
     deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     equipId?: string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname: string
@@ -3415,9 +3537,9 @@ export namespace Prisma {
     updatedAt?: Date | string
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy?: string | null
     deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     equipId?: string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname: string
@@ -3436,9 +3558,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
@@ -3457,9 +3579,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
@@ -3478,9 +3600,9 @@ export namespace Prisma {
     updatedAt?: Date | string
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy?: string | null
     deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     equipId?: string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname: string
@@ -3498,9 +3620,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
@@ -3518,9 +3640,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
@@ -3534,6 +3656,13 @@ export namespace Prisma {
 
   export type ProfileCreateInput = {
     id?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    createdBy: string
+    updatedBy: string
+    deletedBy?: string | null
+    deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -3547,6 +3676,13 @@ export namespace Prisma {
 
   export type ProfileUncheckedCreateInput = {
     id?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    createdBy: string
+    updatedBy: string
+    deletedBy?: string | null
+    deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -3560,6 +3696,13 @@ export namespace Prisma {
 
   export type ProfileUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -3573,6 +3716,13 @@ export namespace Prisma {
 
   export type ProfileUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -3586,6 +3736,13 @@ export namespace Prisma {
 
   export type ProfileCreateManyInput = {
     id?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    createdBy: string
+    updatedBy: string
+    deletedBy?: string | null
+    deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -3599,6 +3756,13 @@ export namespace Prisma {
 
   export type ProfileUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -3611,6 +3775,13 @@ export namespace Prisma {
 
   export type ProfileUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -3648,13 +3819,6 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type EnumStateCreationFilter<$PrismaModel = never> = {
-    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
-    in?: $Enums.StateCreation[]
-    notIn?: $Enums.StateCreation[]
-    not?: NestedEnumStateCreationFilter<$PrismaModel> | $Enums.StateCreation
-  }
-
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | null
@@ -3679,6 +3843,13 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type EnumStateCreationFilter<$PrismaModel = never> = {
+    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
+    in?: $Enums.StateCreation[]
+    notIn?: $Enums.StateCreation[]
+    not?: NestedEnumStateCreationFilter<$PrismaModel> | $Enums.StateCreation
   }
   export type JsonNullableFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -3726,9 +3897,9 @@ export namespace Prisma {
     updatedAt?: SortOrder
     createdBy?: SortOrder
     updatedBy?: SortOrder
-    state?: SortOrder
     deletedBy?: SortOrder
     deletedAt?: SortOrder
+    state?: SortOrder
     equipId?: SortOrder
     logs?: SortOrder
     fullname?: SortOrder
@@ -3746,9 +3917,9 @@ export namespace Prisma {
     updatedAt?: SortOrder
     createdBy?: SortOrder
     updatedBy?: SortOrder
-    state?: SortOrder
     deletedBy?: SortOrder
     deletedAt?: SortOrder
+    state?: SortOrder
     equipId?: SortOrder
     fullname?: SortOrder
     email?: SortOrder
@@ -3764,9 +3935,9 @@ export namespace Prisma {
     updatedAt?: SortOrder
     createdBy?: SortOrder
     updatedBy?: SortOrder
-    state?: SortOrder
     deletedBy?: SortOrder
     deletedAt?: SortOrder
+    state?: SortOrder
     equipId?: SortOrder
     fullname?: SortOrder
     email?: SortOrder
@@ -3808,16 +3979,6 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type EnumStateCreationWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
-    in?: $Enums.StateCreation[]
-    notIn?: $Enums.StateCreation[]
-    not?: NestedEnumStateCreationWithAggregatesFilter<$PrismaModel> | $Enums.StateCreation
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumStateCreationFilter<$PrismaModel>
-    _max?: NestedEnumStateCreationFilter<$PrismaModel>
-  }
-
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | null
@@ -3848,6 +4009,16 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
+  export type EnumStateCreationWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
+    in?: $Enums.StateCreation[]
+    notIn?: $Enums.StateCreation[]
+    not?: NestedEnumStateCreationWithAggregatesFilter<$PrismaModel> | $Enums.StateCreation
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumStateCreationFilter<$PrismaModel>
+    _max?: NestedEnumStateCreationFilter<$PrismaModel>
   }
   export type JsonNullableWithAggregatesFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -3889,6 +4060,13 @@ export namespace Prisma {
 
   export type ProfileCountOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    createdBy?: SortOrder
+    updatedBy?: SortOrder
+    deletedBy?: SortOrder
+    deletedAt?: SortOrder
+    state?: SortOrder
     favorite?: SortOrder
     age?: SortOrder
     weight?: SortOrder
@@ -3902,6 +4080,13 @@ export namespace Prisma {
 
   export type ProfileMaxOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    createdBy?: SortOrder
+    updatedBy?: SortOrder
+    deletedBy?: SortOrder
+    deletedAt?: SortOrder
+    state?: SortOrder
     favorite?: SortOrder
     age?: SortOrder
     weight?: SortOrder
@@ -3914,6 +4099,13 @@ export namespace Prisma {
 
   export type ProfileMinOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    createdBy?: SortOrder
+    updatedBy?: SortOrder
+    deletedBy?: SortOrder
+    deletedAt?: SortOrder
+    state?: SortOrder
     favorite?: SortOrder
     age?: SortOrder
     weight?: SortOrder
@@ -3944,16 +4136,16 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type EnumStateCreationFieldUpdateOperationsInput = {
-    set?: $Enums.StateCreation
-  }
-
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
   }
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
     set?: Date | string | null
+  }
+
+  export type EnumStateCreationFieldUpdateOperationsInput = {
+    set?: $Enums.StateCreation
   }
 
   export type ProfileUpdateOneWithoutUserNestedInput = {
@@ -4016,13 +4208,6 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type NestedEnumStateCreationFilter<$PrismaModel = never> = {
-    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
-    in?: $Enums.StateCreation[]
-    notIn?: $Enums.StateCreation[]
-    not?: NestedEnumStateCreationFilter<$PrismaModel> | $Enums.StateCreation
-  }
-
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | null
@@ -4047,6 +4232,13 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type NestedEnumStateCreationFilter<$PrismaModel = never> = {
+    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
+    in?: $Enums.StateCreation[]
+    notIn?: $Enums.StateCreation[]
+    not?: NestedEnumStateCreationFilter<$PrismaModel> | $Enums.StateCreation
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -4092,16 +4284,6 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedEnumStateCreationWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
-    in?: $Enums.StateCreation[]
-    notIn?: $Enums.StateCreation[]
-    not?: NestedEnumStateCreationWithAggregatesFilter<$PrismaModel> | $Enums.StateCreation
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumStateCreationFilter<$PrismaModel>
-    _max?: NestedEnumStateCreationFilter<$PrismaModel>
-  }
-
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | null
@@ -4144,6 +4326,16 @@ export namespace Prisma {
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
+
+  export type NestedEnumStateCreationWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.StateCreation | EnumStateCreationFieldRefInput<$PrismaModel>
+    in?: $Enums.StateCreation[]
+    notIn?: $Enums.StateCreation[]
+    not?: NestedEnumStateCreationWithAggregatesFilter<$PrismaModel> | $Enums.StateCreation
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumStateCreationFilter<$PrismaModel>
+    _max?: NestedEnumStateCreationFilter<$PrismaModel>
+  }
   export type NestedJsonNullableFilter<$PrismaModel = never> =
     | PatchUndefined<
         Either<Required<NestedJsonNullableFilterBase<$PrismaModel>>, Exclude<keyof Required<NestedJsonNullableFilterBase<$PrismaModel>>, 'path'>>,
@@ -4170,6 +4362,13 @@ export namespace Prisma {
 
   export type ProfileCreateWithoutUserInput = {
     id?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    createdBy: string
+    updatedBy: string
+    deletedBy?: string | null
+    deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -4182,6 +4381,13 @@ export namespace Prisma {
 
   export type ProfileUncheckedCreateWithoutUserInput = {
     id?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    createdBy: string
+    updatedBy: string
+    deletedBy?: string | null
+    deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     favorite: string
     age: string
     weight: string
@@ -4210,6 +4416,13 @@ export namespace Prisma {
 
   export type ProfileUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -4222,6 +4435,13 @@ export namespace Prisma {
 
   export type ProfileUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdBy?: StringFieldUpdateOperationsInput | string
+    updatedBy?: StringFieldUpdateOperationsInput | string
+    deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     favorite?: StringFieldUpdateOperationsInput | string
     age?: StringFieldUpdateOperationsInput | string
     weight?: StringFieldUpdateOperationsInput | string
@@ -4238,9 +4458,9 @@ export namespace Prisma {
     updatedAt?: Date | string
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy?: string | null
     deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     equipId?: string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname: string
@@ -4258,9 +4478,9 @@ export namespace Prisma {
     updatedAt?: Date | string
     createdBy: string
     updatedBy: string
-    state: $Enums.StateCreation
     deletedBy?: string | null
     deletedAt?: Date | string | null
+    state: $Enums.StateCreation
     equipId?: string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname: string
@@ -4294,9 +4514,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
@@ -4314,9 +4534,9 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: StringFieldUpdateOperationsInput | string
     updatedBy?: StringFieldUpdateOperationsInput | string
-    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     deletedBy?: NullableStringFieldUpdateOperationsInput | string | null
     deletedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    state?: EnumStateCreationFieldUpdateOperationsInput | $Enums.StateCreation
     equipId?: NullableStringFieldUpdateOperationsInput | string | null
     logs?: NullableJsonNullValueInput | InputJsonValue
     fullname?: StringFieldUpdateOperationsInput | string
