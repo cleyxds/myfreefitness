@@ -9,8 +9,9 @@ import theme, { fontVariants } from "@/theme"
 import DataRoot from "@/components/data-root"
 
 export const metadata: Metadata = {
-  title: "Fitness App",
-  description: "Fitness App description",
+  title: "Myfreefitness",
+  description:
+    "Myfreefitness é um aplicativo de fitness gratuito, que ajuda você a alcançar seus objetivos de saúde e condicionamento físico.",
 }
 
 export default function RootLayout({

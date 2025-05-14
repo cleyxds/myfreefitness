@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma/client"
+  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -32,6 +32,21 @@ model User {
   imgProfilURL  String?
   imgProfilPATH String?
   address       Json?
+  Profile       Profile?
+}
+
+model Profile {
+  id           String @id @default(cuid())
+  favorite     String
+  age          String
+  weight       String
+  goalWeight   String
+  height       String
+  fitnessLevel String
+  goal         String
+  userId       String @unique
+  user         User   @relation(fields: [userId], references: [id])
+  logs         Json?
 }
 
 enum StateCreation {

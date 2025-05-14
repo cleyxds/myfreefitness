@@ -12,7 +12,7 @@ export default function page() {
   return (
     <Stack px={3} pb={3} pt={3.75}>
       <Stack gap={4.5}>
-        <Header left="back" />
+        <Header />
 
         <Stack gap={1.375}>
           <Typography>Create account</Typography>

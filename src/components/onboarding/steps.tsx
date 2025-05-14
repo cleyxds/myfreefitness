@@ -6,11 +6,13 @@ import MobileStepper from "@mui/material/MobileStepper"
 import Button from "@mui/material/Button"
 
 export default function Steps({
+  steps,
   step,
   onChangeStep,
   onSkip,
   onFinish,
 }: {
+  steps: number
   step: number
   onChangeStep: Dispatch<SetStateAction<number>>
   onSkip?: () => void
@@ -22,12 +24,12 @@ export default function Steps({
   return (
     <MobileStepper
       variant="dots"
-      steps={3}
+      steps={steps}
       position="static"
       activeStep={step}
       sx={{ flexGrow: 1 }}
       nextButton={
-        step === 2 ? (
+        step === steps - 1 ? (
           <Button size="small" onClick={onFinish}>
             Começar
           </Button>

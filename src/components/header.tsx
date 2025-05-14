@@ -9,37 +9,82 @@ export const icons = {
   "arrow-back": (props: ComponentProps<typeof SvgIcon>) => (
     <SvgIcon {...props}>
       <svg
-        width="8"
-        height="13"
-        viewBox="0 0 8 13"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+      </svg>
+    </SvgIcon>
+  ),
+  "filter-bin": (props: ComponentProps<typeof SvgIcon>) => (
+    <SvgIcon {...props}>
+      <svg
+        width="17"
+        height="19"
+        viewBox="0 0 17 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M6.48802 13.0002C6.30951 13.0003 6.13274 12.965 5.96796 12.8963C5.80317 12.8277 5.65364 12.727 5.52802 12.6002L0.381022 7.40017C0.260353 7.28143 0.164519 7.13986 0.0991041 6.98372C0.0336889 6.82757 0 6.65997 0 6.49067C0 6.32138 0.0336889 6.15378 0.0991041 5.99763C0.164519 5.84148 0.260353 5.69992 0.381022 5.58117L5.71502 0.382174C5.88338 0.219549 6.09079 0.103023 6.31725 0.0438228C6.54372 -0.0153773 6.78162 -0.0152565 7.00802 0.0441736C7.23301 0.101334 7.43898 0.21673 7.60522 0.378755C7.77146 0.540781 7.89211 0.743725 7.95502 0.967174C8.01549 1.18901 8.01519 1.42303 7.95414 1.64471C7.89309 1.86639 7.77354 2.06757 7.60802 2.22717L3.20802 6.50017L7.44802 10.7882C7.57068 10.9071 7.66819 11.0495 7.73479 11.2068C7.80138 11.3642 7.8357 11.5333 7.8357 11.7042C7.8357 11.875 7.80138 12.0442 7.73479 12.2015C7.66819 12.3589 7.57068 12.5012 7.44802 12.6202C7.19041 12.8678 6.84527 13.0033 6.48802 12.9972V13.0002Z"
-          fill="#191919"
+          d="M8.617 8.366C12.6857 8.366 15.984 6.71706 15.984 4.683C15.984 2.64894 12.6857 1 8.617 1C4.54832 1 1.25 2.64894 1.25 4.683C1.25 6.71706 4.54832 8.366 8.617 8.366Z"
+          stroke="#303841"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1.25 4.68311C1.26295 6.32048 1.83026 7.90517 2.85941 9.17876C3.88856 10.4523 5.31883 11.3397 6.917 11.6961V16.3351C6.917 16.786 7.09611 17.2184 7.41492 17.5372C7.73373 17.856 8.16613 18.0351 8.617 18.0351C9.06787 18.0351 9.50027 17.856 9.81908 17.5372C10.1379 17.2184 10.317 16.786 10.317 16.3351V11.6961C11.915 11.3395 13.345 10.4521 14.374 9.17849C15.4029 7.90493 15.9701 6.32034 15.983 4.68311"
+          stroke="#303841"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </svg>
     </SvgIcon>
   ),
 } as const
 
+type HeaderProps = {
+  components?: {
+    left?: string | React.ReactNode | any
+    middle?: string | React.ReactNode | any
+    right?: string | React.ReactNode | any
+  }
+}
+
 export default function Header({
-  left,
-  middle,
-  right,
-}: {
-  left?: string | React.ReactNode
-  middle?: string | React.ReactNode
-  right?: string | React.ReactNode
-}) {
+  components: { left, middle, right } = {},
+  ...props
+}: ComponentProps<typeof Stack> & HeaderProps) {
   return (
-    <Stack height={48} direction="row" alignItems="center" gap={1}>
-      <Stack flex={1}>{left}</Stack>
+    <Stack
+      {...props}
+      component="header"
+      height={props.children ? "unset" : 48}
+      direction="row"
+      alignItems="center"
+      gap={1}
+    >
+      {props.children ? (
+        props.children
+      ) : (
+        <>
+          <Stack alignItems="flex-start" flex={1}>
+            {left}
+          </Stack>
 
-      <Stack flex={1}>{middle}</Stack>
+          <Stack alignItems="center" flex={1}>
+            {middle}
+          </Stack>
 
-      <Stack flex={1}>{right}</Stack>
+          <Stack alignItems="flex-end" flex={1}>
+            {right}
+          </Stack>
+        </>
+      )}
     </Stack>
   )
 }

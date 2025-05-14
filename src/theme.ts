@@ -4,8 +4,6 @@ import { Montserrat, Bebas_Neue, DM_Sans } from "next/font/google"
 
 import { createTheme, PaletteColor, PaletteColorOptions } from "@mui/material/styles"
 
-import { css } from "@mui/material/styles"
-
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
@@ -27,17 +25,6 @@ const dm_sans = DM_Sans({
   variable: "--font-dmsans",
 })
 
-const screen = css`
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  margin: 0;
-  min-height: 100vh;
-  max-width: 100% !important;
-`
-
 const theme = createTheme({
   colorSchemes: {
     dark: true,
@@ -49,6 +36,12 @@ const theme = createTheme({
     },
     black_19: {
       main: "#191919",
+      "300": "#3A4750",
+    },
+    orange_primary: {
+      light: "#FABC06",
+      main: "#F6A010",
+      dark: "#D48103",
     },
   },
   typography: {
@@ -67,16 +60,18 @@ const theme = createTheme({
       fontSize: 15,
       fontWeight: 500,
     },
+    dm_sans_body1: {
+      fontFamily: dm_sans.style.fontFamily,
+      fontSize: 14,
+      fontWeight: 500,
+    },
+    montserrat_body1: {
+      fontFamily: montserrat.style.fontFamily,
+      fontSize: 14,
+      fontWeight: 500,
+    },
   },
   components: {
-    MuiContainer: {
-      defaultProps: {
-        component: "main",
-      },
-      styleOverrides: {
-        root: screen,
-      },
-    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -111,39 +106,47 @@ const theme = createTheme({
 
 declare module "@mui/material/styles" {
   interface Palette {
-    green_primary: PaletteColor
-    black_19: PaletteColor
+    green_primary: {
+      main: string
+    }
+    black_19: {
+      main: string
+      300: string
+    }
+    orange_primary: {
+      light: string
+      main: string
+      dark: string
+    }
   }
 
   interface PaletteOptions {
     green_primary: PaletteColorOptions
     black_19: PaletteColorOptions
+    orange_primary: PaletteColorOptions
   }
 
   interface TypographyVariants {
     bebas_neue_h2: React.CSSProperties
+    dm_sans_h6: React.CSSProperties
+    dm_sans_body1: React.CSSProperties
+    montserrat_body1: React.CSSProperties
   }
 
   interface TypographyVariantsOptions {
     bebas_neue_h2: React.CSSProperties
-  }
-
-  interface TypographyVariants {
     dm_sans_h6: React.CSSProperties
-  }
-
-  interface TypographyVariantsOptions {
-    dm_sans_h6: React.CSSProperties
+    dm_sans_body1: React.CSSProperties
+    montserrat_body1: React.CSSProperties
   }
 }
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     bebas_neue_h2: true
-  }
-
-  interface TypographyPropsVariantOverrides {
     dm_sans_h6: true
+    dm_sans_body1: true
+    montserrat_body1: true
   }
 }
 

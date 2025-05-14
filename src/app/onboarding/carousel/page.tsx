@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation"
 import Stack from "@mui/material/Stack"
 
 import Steps from "@/components/onboarding/steps"
-import OnboardingOne from "@/components/onboarding/onboarding-one"
+import OnboardingOne from "@/components/onboarding/onboarding-two"
 import OnboardingTwo from "@/components/onboarding/onboarding-two"
 import OnboardingThree from "@/components/onboarding/onboarding-three"
 
@@ -26,9 +26,10 @@ export default function page() {
 
   return (
     <Stack>
-      {<Component />}
+      <Component />
 
       <Steps
+        steps={steps.length}
         step={activeStep}
         onChangeStep={setActiveStep}
         onFinish={onFinish}

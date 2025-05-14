@@ -21,11 +21,13 @@ export default function page() {
     <Stack px={3} pb={3} pt={3.75}>
       <Stack gap={4.5}>
         <Header
-          left={
-            <IconButton onClick={() => router.back()} sx={{ alignSelf: "flex-start" }}>
-              {icons["arrow-back"]({ sx: { color: "black_19.main" } })}
-            </IconButton>
-          }
+          components={{
+            left: (
+              <IconButton onClick={() => router.back()} sx={{ alignSelf: "flex-start" }}>
+                {icons["arrow-back"]({ sx: { color: "black_19.main" } })}
+              </IconButton>
+            ),
+          }}
         />
 
         <Stack>

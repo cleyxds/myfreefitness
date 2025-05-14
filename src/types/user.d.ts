@@ -21,4 +21,5 @@ type User = Creation & {
   imgProfilURL?: string
   imgProfilPATH?: string
   address?: Address
+  profile?: Profile
 }
