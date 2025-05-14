@@ -24,10 +24,17 @@ export async function POST(request: Request) {
     const { age, favorite, fitnessLevel, goal, goalWeight, height, weight, userId } =
       await createProfileSchema.validate(body)
 
+    const now = new Date()
+
     const log = createLog("created", userId)
 
     const profile = await prisma.profile.create({
       data: {
+        createdAt: now,
+        updatedAt: now,
+        state: "IN_PROGRESS",
+        createdBy: userId,
+        updatedBy: userId,
         age,
         favorite,
         fitnessLevel,
