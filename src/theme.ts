@@ -26,9 +26,6 @@ const dm_sans = DM_Sans({
 })
 
 const theme = createTheme({
-  colorSchemes: {
-    dark: true,
-  },
   palette: {
     mode: "light",
     green_primary: {

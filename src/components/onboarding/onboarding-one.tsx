@@ -1,15 +1,16 @@
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
+import SvgIcon from "@mui/material/SvgIcon"
 
 import MUIImage from "@/components/mui-image"
 
-export default function OnboardingTwo() {
+export default function OnboardingOne() {
   return (
-    <Stack component="main">
-      <Stack flex={0.8}>
-        <Stack position="relative" width={370.17} height={361.7} flex={1}>
+    <Stack component="main" gap={5.375}>
+      <Stack flex={0.8} position="relative">
+        <Stack position="relative" width="100%" height={361.7}>
           <MUIImage
-            src="/images/infographs/onboarding-two.webp"
+            src="/images/infographs/onboarding-one.webp"
             alt="Corpo perfeito"
             fill
             priority
@@ -25,8 +26,9 @@ export default function OnboardingTwo() {
             fontSize={48}
             color="common.black"
           >
-            Shot strong
+            Corpo perfeito
             <br />
+            fazendo exercícios&nbsp;
             <Typography
               fontFamily="var(--font-bebasneue)"
               fontWeight={400}
@@ -34,10 +36,8 @@ export default function OnboardingTwo() {
               color="green_primary.main"
               component="span"
             >
-              Timeless
+              Crossfit
             </Typography>
-            <br />
-            Woman training
           </Typography>
         </Stack>
       </Stack>
